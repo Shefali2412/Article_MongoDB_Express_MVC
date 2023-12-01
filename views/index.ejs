@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/addNew" >Add an article</a>
+    <% for (let i = 0; i < articles.length; i++) { %>
+        <div>
+            <h3>Title: <%= articles[i].title %> </h3>
+            <p> Desc: <%= articles[i].desc.slice(0,20) %></p>
+            <p>Created at: <%= articles[i].create_at %></p>
+            <a href="/full-Article/<%= articles[i]._id %>">see more...</a>
+        </div>
+
+        <% }%>
+
+      
+
+   
+</body>
+</html>
+
